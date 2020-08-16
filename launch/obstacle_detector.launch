@@ -2,8 +2,8 @@
 
   <node name="scans_merger" pkg="obstacle_detector" type="scans_merger_node">
     <param name="active"            value="true"/>
-    <param name="publish_scan"      value="false"/>
-    <param name="publish_pcl"       value="true"/>
+    <param name="publish_scan"      value="truw"/>
+    <param name="publish_pcl"       value="false"/>
 
     <param name="ranges_num"        value="1000"/>
 
@@ -16,13 +16,13 @@
     <param name="max_y_range"       value="10.0"/>
 
     <param name="fixed_frame_id"   value="map"/>
-    <param name="target_frame_id"   value="robot"/>
+    <param name="target_frame_id"   value="base_footprint"/>
   </node>
 
   <node name="obstacle_extractor" pkg="obstacle_detector" type="obstacle_extractor_node">
     <param name="active"               value="true"/>
-    <param name="use_scan"             value="false"/>
-    <param name="use_pcl"              value="true"/>
+    <param name="use_scan"             value="true"/>
+    <param name="use_pcl"              value="false"/>
 
     <param name="use_split_and_merge"    value="true"/>
     <param name="circles_from_visibles"  value="true"/>
