@@ -17,6 +17,8 @@
 
     <param name="fixed_frame_id"   value="map"/>
     <param name="target_frame_id"   value="base_footprint"/>
+
+    <remap from="/obstacle_detector/front_scan" to="/spencer/sensors/laser_front/echo0"/>
   </node>
 
   <node name="obstacle_extractor" pkg="obstacle_detector" type="obstacle_extractor_node">
