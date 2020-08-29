@@ -9,11 +9,11 @@ from obstacle_detector.msg import Obstacles, CircleObstacle
 from geometry_msgs.msg import PoseArray, Pose
 
 def newMessageReceived(obstacles):
-    poseArray = PoseArray()
-    pose = Pose()
+    poseArray = PoseArray()    
     poseArray.header = obstacles.header
 
     for obstacle in obstacles.circles:
+        pose = Pose()
         pose.position.x = obstacle.center.x
         pose.position.y = obstacle.center.y
         pose.position.z = obstacle.center.z
